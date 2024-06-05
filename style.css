@@ -1,0 +1,73 @@
+h1 {
+  color: #f78605;
+}
+
+.box {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  border: 2px solid rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+}
+
+.boxchild {
+  display: flex;
+  width: 250px;
+  height: 250px;
+  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  content-visibility: hidden;
+}
+
+.boxchild:hover {
+  animation: photo 5s linear infinite;
+}
+
+@keyframes photo {
+  0% {
+    background: red;
+  }
+  25% {
+    background: yellow;
+  }
+  50% {
+    background: blue;
+  }
+  75% {
+    background: green;
+  }
+  100% {
+    background: red;
+  }
+}
+.boxchild:hover {
+  content-visibility: visible;
+}
+
+.boxchild:hover p {
+  animation: name 5s linear 2s infinite;
+  font-size: xx-large;
+}
+
+@keyframes name {
+  0%, 24% {
+    color: aliceblue;
+  }
+  25%, 49% {
+    color: red;
+  }
+  50%, 74% {
+    color: yellow;
+  }
+  75%, 100% {
+    color: black;
+  }
+}
+body:hover {
+  animation-delay: 5s;
+  content-visibility: visible;
+}
+
+/*# sourceMappingURL=style.css.map */
